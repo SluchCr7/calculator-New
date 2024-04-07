@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="../images/house.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+  <div class="calculator">
+      <div class="top_calc">
+        <span class="calc_text">CALC</span>
+        <div class="switch">
+          <span class="theme">theme</span>
+          <div class="toggle_switch">
+            <div class="numbers">
+              <span id="one" data-theme="theme1">1</span>
+              <span id="two" data-theme="theme2">2</span>
+              <span id="three" data-theme="theme3">3</span>
+            </div>
+            <div class="toggle"><div class="circle theme1circle" id="circle"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="screen">
+        <input type="text" id="screen" disabled>
+      </div>
+      <div class="keypad">
+        <div class="keys_container">
+          <button class="key" onclick="show(7)" value="7">7</button>
+          <button class="key" onclick="show(8)" value="8">8</button>
+          <button class="key" onclick="show(9)" value="9">9</button>
+          <button class="key_del key" id="delete" onclick="del()" value="Del">Del</button>
+          <button class="key" onclick="show(4)" value="4">4</button>
+          <button class="key" onclick="show(5)" value="5">5</button>
+          <button class="key" onclick="show(6)" value="6">6</button>
+          <button class="key" id="Add" onclick="show('+')" value="+">+</button>
+          <button class="key" onclick="show(1)" value="1">1</button>
+          <button class="key" onclick="show(2)" value="2">2</button>
+          <button class="key" onclick="show(3)" value="3">3</button>
+          <button class="key" id="Sub" onclick="show('-')" value="-">-</button>
+          <button class="key" onclick="show(0)" value="0">0</button>
+          <button class="key" onclick="show('.')" value=".">.</button>
+          <button class="key" id="div" onclick="show('/')" value="/">/</button>
+          <button class="key" id="mul" onclick="show('*')" value="*">*</button>
+        </div>
+        <div class="key_option_container">
+          <button class="key_reset key" id="reset" onclick="cleardata()">Reset</button>
+          <button class="key_equal key" id="equal" onclick="Equal()">=</button>
+        </div>
+      </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
